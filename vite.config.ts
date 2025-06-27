@@ -38,5 +38,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/git-tutorial-site/",
+  base: "/git-commands-guide",
 });
