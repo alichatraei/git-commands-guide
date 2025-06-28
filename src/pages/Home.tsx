@@ -41,8 +41,8 @@ const Home: React.FC = () => {
         </div>
         <h1 className="text-5xl font-bold text-gray-800">آموزش کامل Git</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          یادگیری Git از صفر تا صد - از مفاهیم اولیه تا تکنیک‌های پیشرفته
-          <br />
+          یادگیری Git - از مفاهیم اولیه تا تکنیک‌های پیشرفته
+<br />
           همراه با مثال‌های عملی و پروژه‌های واقعی
         </p>
         <div className="flex flex-col w-fit mx-auto sm:flex-row gap-4 items-center justify-center">
