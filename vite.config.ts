@@ -13,21 +13,21 @@ export default defineConfig({
       manifest: {
         name: "آموزش Git - راهنمای کامل",
         short_name: "آموزش Git",
-        description: "آموزش کامل Git از صفر تا صد",
+        description: "آموزش کامل Git",
         theme_color: "#2563eb",
         background_color: "#ffffff",
         display: "standalone",
         orientation: "portrait",
         scope: "/",
-        start_url: "/",
+        start_url: "/git-commands-guide",
         icons: [
           {
-            src: "icon-192.png",
+            src: "git-188.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "icon-512.png",
+            src: "git-375.png",
             sizes: "512x512",
             type: "image/png",
           },
