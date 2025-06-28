@@ -1,5 +1,6 @@
 import React from "react";
 import { GitBranch, Heart, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const Footer: React.FC = () => {
               <span className="text-2xl font-bold">آموزش Git</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              آموزش کامل و جامع Git از صفر تا صد
+              آموزش کامل و جامع Git
               <br />
               برای همه سطوح از مبتدی تا پیشرفته
             </p>
@@ -57,18 +58,18 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4">تماس با ما</h3>
+            <h3 className="text-xl font-bold mb-4">تماس با من</h3>
             <div className="space-y-2 text-gray-300">
               <p>برای سوالات و پیشنهادات:</p>
-              <a
-                href="https://github.com"
+              <Link
+                to="https://github.com/alichatraei"
                 className="flex items-center hover:text-primary-400 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Github className="w-5 h-5 ml-2" />
                 GitHub
-              </a>
+              </Link>
             </div>
           </div>
         </div>
