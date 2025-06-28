@@ -455,7 +455,7 @@ const Chapter3: React.FC = () => {
               }
               className={`flex items-center px-4 py-2 rounded-lg transition-all duration-200 ${
                 activeWorkflow === key
-                  ? `bg-${step.color}-600 text-white shadow-lg transform scale-105`
+                  ? `bg-${step.color}-500 text-white shadow-lg transform scale-105`
                   : `bg-${step.color}-100 text-${step.color}-700 hover:bg-${step.color}-200`
               }`}
             >
@@ -494,7 +494,10 @@ const Chapter3: React.FC = () => {
                       <h4 className={`font-bold text-${step.color}-800 mb-3`}>
                         فایل‌های موجود:
                       </h4>
-                      <div className={`bg-${step.color}-100 p-4 rounded-lg`}>
+                      <div
+                        dir="ltr"
+                        className={`bg-${step.color}-100 p-4 rounded-lg`}
+                      >
                         {step.files.map((file, index) => (
                           <div
                             key={index}
@@ -537,11 +540,14 @@ const Chapter3: React.FC = () => {
             </div>
 
             <div className="flex items-center">
-              <div className="bg-gray-300 w-12 h-0.5 hidden md:block"></div>
-              <div className="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm mx-2 shadow-lg">
+              <div className="bg-gray-300 w-10 h-0.5 hidden md:block"></div>
+              <div
+                dir="ltr"
+                className="bg-gray-800 flex items-center mx-2 justify-center text-white px-4 py-2 rounded-lg text-sm shadow-lg"
+              >
                 <code>git add</code>
               </div>
-              <div className="bg-gray-300 w-12 h-0.5 hidden md:block"></div>
+              <div className="bg-gray-300 w-10 h-0.5 hidden md:block"></div>
             </div>
 
             <div className="bg-yellow-100 border-2 border-yellow-300 rounded-lg p-4 text-center min-w-[150px]">
@@ -551,11 +557,11 @@ const Chapter3: React.FC = () => {
             </div>
 
             <div className="flex items-center">
-              <div className="bg-gray-300 w-12 h-0.5 hidden md:block"></div>
+              <div className="bg-gray-300 w-10 h-0.5 hidden md:block"></div>
               <div className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm mx-2 shadow-lg">
                 <code>git commit</code>
               </div>
-              <div className="bg-gray-300 w-12 h-0.5 hidden md:block"></div>
+              <div className="bg-gray-300 w-10 h-0.5 hidden md:block"></div>
             </div>
 
             <div className="bg-green-100 border-2 border-green-300 rounded-lg p-4 text-center min-w-[150px]">
@@ -638,7 +644,10 @@ const Chapter3: React.FC = () => {
                     <Play className="w-4 h-4 ml-1" />
                     مثال:
                   </h4>
-                  <div className="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                  <div
+                    dir="ltr"
+                    className="bg-gray-900 text-white p-4 rounded-lg font-mono text-sm overflow-x-auto"
+                  >
                     <pre className="whitespace-pre-wrap">$ {cmd.example}</pre>
                   </div>
                 </div>
@@ -649,7 +658,10 @@ const Chapter3: React.FC = () => {
                       <Eye className="w-4 h-4 ml-1" />
                       خروجی:
                     </h4>
-                    <div className="bg-green-50 text-green-800 p-4 rounded-lg font-mono text-sm whitespace-pre-line overflow-x-auto border border-green-200">
+                    <div
+                      dir="ltr"
+                      className="bg-green-50 text-green-800 p-4 rounded-lg font-mono text-sm whitespace-pre-line overflow-x-auto border border-green-200"
+                    >
                       {cmd.output}
                     </div>
                   </div>
@@ -685,7 +697,7 @@ const Chapter3: React.FC = () => {
               دهید:
             </p>
 
-            <div className="space-y-4">
+            <div dir="ltr" className="space-y-4">
               <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
                 <div className="text-yellow-400 mb-2">
                   # مرحله ۱: ایجاد پروژه
@@ -743,7 +755,7 @@ const Chapter3: React.FC = () => {
               انتخابی commit کنید:
             </p>
 
-            <div className="space-y-4">
+            <div dir="ltr" className="space-y-4">
               <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
                 <div className="text-yellow-400 mb-2">
                   # ایجاد تغییرات مختلف
@@ -787,7 +799,7 @@ const Chapter3: React.FC = () => {
           </div>
 
           {/* Exercise 3 */}
-          <div className="bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-200 rounded-xl p-6">
+          <div dir="ltr" className="bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-200 rounded-xl p-6">
             <h3 className="text-xl font-bold text-purple-800 mb-4 flex items-center">
               <Search className="w-6 h-6 ml-2" />
               تمرین ۳: کاوش در تاریخچه
@@ -947,7 +959,7 @@ const Chapter3: React.FC = () => {
                 </span>
               </div>
 
-              <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm whitespace-pre-line overflow-x-auto">
+              <div dir="ltr" className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm whitespace-pre-line overflow-x-auto">
                 {issue.code}
               </div>
             </div>
