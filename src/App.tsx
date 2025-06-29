@@ -5,6 +5,7 @@ import Chapter1 from "./pages/Chapter1";
 import Chapter2 from "./pages/Chapter2";
 import Chapter3 from "./pages/Chapter3";
 import Footer from "./components/Footer";
+import GitBranchChapter from "./pages/Chapter4";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/chapter1" element={<Chapter1 />} />
             <Route path="/chapter2" element={<Chapter2 />} />
             <Route path="/chapter3" element={<Chapter3 />} />
+            <Route path="/chapter4" element={<GitBranchChapter />} />
           </Routes>
         </main>
         <Footer />
