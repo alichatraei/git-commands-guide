@@ -2,7 +2,7 @@
   "name": "آموزش Git - راهنمای کامل",
   "short_name": "آموزش Git",
   "description": "آموزش کامل Git از صفر تا صد",
-  "start_url": "/",
+  "start_url": "/git-commands-guide",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
