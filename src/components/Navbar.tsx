@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50">
+    <nav className="main-navbar bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex w-full justify-between lg:justify-start items-center gap-x-8 py-4">
           <Link to="/" className="flex items-center gap-x-2 space-x-reverse">

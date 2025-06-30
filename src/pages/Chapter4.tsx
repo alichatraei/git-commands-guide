@@ -26,6 +26,8 @@ const GitBranchChapter = () => {
   const [activeBranch, setActiveBranch] =
     useState<keyof typeof sampleBranches>("main");
   const [navbarHeight, setNavbarHeight] = useState<number>(0);
+  const [branchName, setBranchName] = useState<string>("user-authentication");
+  const [branchType, setBranchType] = useState<string>("feature");
 
   useEffect(() => {
     const navbar = document.querySelector(".main-navbar");
@@ -110,22 +112,22 @@ const GitBranchChapter = () => {
                   </p>
                 </div>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
+              <div dir="ltr" className="bg-gray-50 p-6 rounded-lg">
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="w-4 h-4 bg-blue-500 rounded-full ml-3"></div>
+                    <div className="w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
                     <span className="font-mono text-sm">main</span>
-                    <span className="text-gray-500 text-xs mr-2">
+                    <span className="text-gray-500 text-xs ml-2">
                       (شاخه اصلی)
                     </span>
                   </div>
-                  <div className="mr-4 border-r-2 border-gray-300 pr-4 space-y-2">
+                  <div className="ml-4 border-l-2 border-gray-300 pl-4 space-y-2">
                     <div className="flex items-center">
-                      <div className="w-3 h-3 bg-green-500 rounded-full ml-3"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
                       <span className="font-mono text-sm">feature/login</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full ml-3"></div>
+                      <div className="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
                       <span className="font-mono text-sm">feature/signup</span>
                     </div>
                   </div>
@@ -259,19 +261,19 @@ const GitBranchChapter = () => {
             </h3>
             <div className="space-y-2 font-mono text-sm">
               <div className="flex">
-                <span className="text-yellow-400 w-32">مشاهده:</span>
+                <span className="text-yellow-400 w-fit ml-3">مشاهده:</span>
                 <span className="text-white">git branch</span>
               </div>
               <div className="flex">
-                <span className="text-yellow-400 w-32">ایجاد:</span>
+                <span className="text-yellow-400 w-fit ml-3">ایجاد:</span>
                 <span className="text-white">git branch feature/new</span>
               </div>
               <div className="flex">
-                <span className="text-yellow-400 w-32">تغییر:</span>
+                <span className="text-yellow-400 w-fit ml-3">تغییر:</span>
                 <span className="text-white">git switch feature/new</span>
               </div>
               <div className="flex">
-                <span className="text-yellow-400 w-32">حذف:</span>
+                <span className="text-yellow-400 w-fit ml-3">حذف:</span>
                 <span className="text-white">git branch -d feature/old</span>
               </div>
             </div>
@@ -290,7 +292,7 @@ const GitBranchChapter = () => {
         <div className="space-y-6">
           {/* Header */}
           <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-xl border border-indigo-200">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center">
               <Eye className="w-10 h-10 text-indigo-600 ml-3" />
               <div>
                 <h2 className="text-3xl font-bold text-indigo-800">
@@ -308,9 +310,9 @@ const GitBranchChapter = () => {
             <h3 className="text-xl font-bold text-gray-800 mb-4">
               دستورات پایه مشاهده
             </h3>
-            <div className="space-y-4">
+            <div dir="ltr" className="space-y-4">
               <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                <div className="text-yellow-400 mb-2">
+                <div dir="rtl" className="text-yellow-400 mb-2">
                   # مشاهده تمام branch های محلی
                 </div>
                 <div className="text-white">git branch</div>
@@ -318,14 +320,14 @@ const GitBranchChapter = () => {
                 <div className="text-green-400">* main</div>
                 <div className="text-green-400"> feature/dashboard</div>
 
-                <div className="text-yellow-400 mt-4 mb-2">
+                <div dir="rtl" className="text-yellow-400 mt-4 mb-2">
                   # مشاهده branch های remote
                 </div>
                 <div className="text-white">git branch -r</div>
                 <div className="text-red-400 mt-2"> origin/main</div>
                 <div className="text-red-400"> origin/feature/login</div>
 
-                <div className="text-yellow-400 mt-4 mb-2">
+                <div dir="rtl" className="text-yellow-400 mt-4 mb-2">
                   # مشاهده همه (محلی + remote)
                 </div>
                 <div className="text-white">git branch -a</div>
@@ -338,7 +340,7 @@ const GitBranchChapter = () => {
                 </div>
               </div>
 
-              <div className="bg-blue-50 p-4 rounded-lg">
+              <div dir="rtl" className="bg-blue-50 p-4 rounded-lg">
                 <h4 className="font-bold text-blue-800 mb-2">💡 نکات مهم:</h4>
                 <ul className="text-blue-700 text-sm space-y-1">
                   <li>• ستاره (*) نشان‌دهنده branch فعلی است</li>
@@ -357,9 +359,9 @@ const GitBranchChapter = () => {
               <h3 className="text-xl font-bold text-green-800 mb-4">
                 مشاهده با جزئیات
               </h3>
-              <div className="space-y-4">
+              <div dir="ltr" className="space-y-4">
                 <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                  <div className="text-yellow-400 mb-2">
+                  <div dir="rtl" className="text-yellow-400 mb-2">
                     # آخرین commit هر branch
                   </div>
                   <div className="text-white">git branch -v</div>
@@ -371,7 +373,7 @@ const GitBranchChapter = () => {
                     * main 5d6e7f8 Update README
                   </div>
 
-                  <div className="text-yellow-400 mt-3 mb-2">
+                  <div dir="rtl" className="text-yellow-400 mt-3 mb-2">
                     # branch های merge شده
                   </div>
                   <div className="text-white">git branch --merged</div>
@@ -381,7 +383,7 @@ const GitBranchChapter = () => {
                   </div>
                   <div className="text-green-400">* main</div>
 
-                  <div className="text-yellow-400 mt-3 mb-2">
+                  <div dir="rtl" className="text-yellow-400 mt-3 mb-2">
                     # branch های merge نشده
                   </div>
                   <div className="text-white">git branch --no-merged</div>
@@ -397,9 +399,9 @@ const GitBranchChapter = () => {
               <h3 className="text-xl font-bold text-purple-800 mb-4">
                 فیلتر و جستجو
               </h3>
-              <div className="space-y-4">
+              <div dir="ltr" className="space-y-4">
                 <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                  <div className="text-yellow-400 mb-2">
+                  <div dir="rtl" className="text-yellow-400 mb-2">
                     # جستجوی branch با الگو
                   </div>
                   <div className="text-white">
@@ -408,14 +410,14 @@ const GitBranchChapter = () => {
                   <div className="text-green-400 mt-2"> feature/login</div>
                   <div className="text-green-400"> feature/dashboard</div>
 
-                  <div className="text-yellow-400 mt-3 mb-2">
+                  <div dir="rtl" className="text-yellow-400 mt-3 mb-2">
                     # مرتب‌سازی بر اساس تاریخ
                   </div>
                   <div className="text-white">
                     git branch --sort=-committerdate
                   </div>
 
-                  <div className="text-yellow-400 mt-3 mb-2">
+                  <div dir="rtl" className="text-yellow-400 mt-3 mb-2">
                     # نمایش تاریخ آخرین commit
                   </div>
                   <div className="text-white">
@@ -432,9 +434,11 @@ const GitBranchChapter = () => {
             <h3 className="text-xl font-bold text-gray-800 mb-6">
               نمایش گرافیکی Branch ها
             </h3>
-            <div className="space-y-4">
+            <div dir="ltr" className="space-y-4">
               <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
-                <div className="text-yellow-400 mb-2"># نمایش گراف ساده</div>
+                <div dir="rtl" className="text-yellow-400 mb-2">
+                  # نمایش گراف ساده
+                </div>
                 <div className="text-white">
                   git log --oneline --graph --all
                 </div>
@@ -446,26 +450,26 @@ const GitBranchChapter = () => {
                 <div className="text-green-400">|/</div>
                 <div className="text-green-400">* 9f0a1b2 Initial commit</div>
 
-                <div className="text-yellow-400 mt-4 mb-2">
+                <div dir="rtl" className="text-yellow-400 mt-4 mb-2">
                   # نمایش کامل با تاریخ
                 </div>
                 <div className="text-white">{`git log --graph --pretty=format:'%h -%d %s (%cr) <%an>' --abbrev-commit --all`}</div>
               </div>
 
-              <div className="bg-indigo-50 p-4 rounded-lg">
+              <div dir="rtl" className="bg-indigo-50 p-4 rounded-lg">
                 <h4 className="font-bold text-indigo-800 mb-2">
                   🎨 ابزارهای گرافیکی:
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                  <div className="bg-white p-3 rounded border">
+                  <div className="bg-white p-3 rounded">
                     <strong className="text-indigo-700">GitKraken</strong>
                     <p className="text-gray-600">رابط گرافیکی حرفه‌ای</p>
                   </div>
-                  <div className="bg-white p-3 rounded border">
+                  <div className="bg-white p-3 rounded">
                     <strong className="text-indigo-700">SourceTree</strong>
                     <p className="text-gray-600">ابزار رایگان Atlassian</p>
                   </div>
-                  <div className="bg-white p-3 rounded border">
+                  <div className="bg-white p-3 rounded">
                     <strong className="text-indigo-700">VS Code</strong>
                     <p className="text-gray-600">پلاگین GitLens</p>
                   </div>
@@ -549,8 +553,10 @@ const GitBranchChapter = () => {
 
                   <div className="mt-4 bg-gray-900 text-green-400 p-3 rounded font-mono text-sm">
                     <div className="text-yellow-400">دستور مشاهده:</div>
-                    <div className="text-white">git branch -v</div>
-                    <div className="text-green-400 mt-1">
+                    <div dir="ltr" className="text-white">
+                      git branch -v
+                    </div>
+                    <div dir="ltr" className="text-green-400 mt-1">
                       {activeBranch === "main" ? "* " : "  "}
                       {activeBranch}{" "}
                       <span className="text-gray-400">a1b2c3d</span> Last commit
@@ -608,7 +614,7 @@ const GitBranchChapter = () => {
         <div className="space-y-6">
           {/* Header */}
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center">
               <Plus className="w-10 h-10 text-green-600 ml-3" />
               <div>
                 <h2 className="text-3xl font-bold text-green-800">
@@ -631,25 +637,27 @@ const GitBranchChapter = () => {
                 <div className="text-yellow-400 mb-2">
                   # ایجاد branch جدید (بدون تغییر)
                 </div>
-                <div className="text-white">git branch feature/new-feature</div>
+                <div dir="ltr" className="text-white">
+                  git branch feature/new-feature
+                </div>
 
                 <div className="text-yellow-400 mt-4 mb-2">
                   # ایجاد و تغییر همزمان (روش قدیمی)
                 </div>
-                <div className="text-white">
+                <div dir="ltr" className="text-white">
                   git checkout -b feature/new-feature
                 </div>
-                <div className="text-green-400 mt-1">
+                <div dir="ltr" className="text-green-400 mt-1">
                   Switched to a new branch 'feature/new-feature'
                 </div>
 
                 <div className="text-yellow-400 mt-4 mb-2">
                   # ایجاد و تغییر همزمان (روش جدید)
                 </div>
-                <div className="text-white">
+                <div dir="ltr" className="text-white">
                   git switch -c feature/new-feature
                 </div>
-                <div className="text-green-400 mt-1">
+                <div dir="ltr" className="text-green-400 mt-1">
                   Switched to a new branch 'feature/new-feature'
                 </div>
               </div>
@@ -666,7 +674,7 @@ const GitBranchChapter = () => {
                     git checkout -b
                   </h4>
                   <p className="text-orange-700 text-sm">
-                    روش سنتی ایجاد + تغییر
+                    روش قدیمی تر ایجاد + تغییر
                   </p>
                 </div>
                 <div className="bg-green-50 border border-green-200 p-3 rounded">
@@ -674,7 +682,7 @@ const GitBranchChapter = () => {
                     git switch -c
                   </h4>
                   <p className="text-green-700 text-sm">
-                    روش مدرن ایجاد + تغییر
+                    روش جدیدتر ایجاد + تغییر
                   </p>
                 </div>
               </div>
@@ -690,26 +698,26 @@ const GitBranchChapter = () => {
               <div className="space-y-4">
                 <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
                   <div className="text-yellow-400 mb-2"># از commit مشخص</div>
-                  <div className="text-white">
-                    git branch feature/fix 1a2b3c4
+                  <div dir="ltr" className="text-white">
+                    git branch feature/fix-1a2b3c4
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2"># از tag</div>
-                  <div className="text-white">
-                    git branch hotfix/urgent v1.2.0
+                  <div dir="ltr" className="text-white">
+                    git branch hotfix/urgent-v1.2.0
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # از branch دیگر
                   </div>
-                  <div className="text-white">
-                    git branch feature/new develop
+                  <div dir="ltr" className="text-white">
+                    git branch feature/new-develop
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # از remote branch
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch feature/copy origin/feature/template
                   </div>
                 </div>
@@ -725,26 +733,31 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400 mb-2">
                     # ایجاد branch محلی
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git switch -c feature/awesome
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # کار روی branch...
                   </div>
-                  <div className="text-white">{`echo "new feature" > feature.txt`}</div>
-                  <div className="text-white">git add .</div>
-                  <div className="text-white">
+                  <div
+                    dir="ltr"
+                    className="text-white"
+                  >{`echo "new feature" > feature.txt`}</div>
+                  <div dir="ltr" className="text-white">
+                    git add .
+                  </div>
+                  <div dir="ltr" className="text-white">
                     git commit -m "Add awesome feature"
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # push اولیه با تنظیم upstream
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git push -u origin feature/awesome
                   </div>
-                  <div className="text-green-400 mt-1">
+                  <div dir="ltr" className="text-green-400 mt-1">
                     Branch 'feature/awesome' set up to track remote branch
                   </div>
                 </div>
@@ -876,11 +889,16 @@ const GitBranchChapter = () => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         نوع Branch:
                       </label>
-                      <select className="w-full p-2 border border-gray-300 rounded-md">
-                        <option>feature</option>
-                        <option>hotfix</option>
-                        <option>bugfix</option>
-                        <option>release</option>
+                      <select
+                        onChange={(e) => {
+                          setBranchType(e.target.value);
+                        }}
+                        className="w-full p-2 border border-gray-300 rounded-md"
+                      >
+                        <option value="feature">feature</option>
+                        <option value="hotfix">hotfix</option>
+                        <option value="bugfix">bugfix</option>
+                        <option value="release">release</option>
                       </select>
                     </div>
                     <div>
@@ -890,24 +908,11 @@ const GitBranchChapter = () => {
                       <input
                         type="text"
                         placeholder="user-authentication"
+                        onChange={(e) => {
+                          setBranchName(e.target.value);
+                        }}
                         className="w-full p-2 border border-gray-300 rounded-md"
                       />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        شاخه مبدا:
-                      </label>
-                      <select className="w-full p-2 border border-gray-300 rounded-md">
-                        <option>main</option>
-                        <option>develop</option>
-                        <option>staging</option>
-                      </select>
-                    </div>
-                    <div className="flex items-center">
-                      <input type="checkbox" id="switch" className="ml-2" />
-                      <label htmlFor="switch" className="text-sm text-gray-700">
-                        بعد از ایجاد به این branch تغییر کن
-                      </label>
                     </div>
                   </div>
                 </div>
@@ -918,22 +923,22 @@ const GitBranchChapter = () => {
                   </h4>
                   <div className="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm">
                     <div className="text-yellow-400"># دستور پیشنهادی:</div>
-                    <div className="text-white">
-                      git switch -c feature/user-authentication
+                    <div dir="ltr" className="text-white">
+                      git switch -c {`${branchType}/${branchName}`}
                     </div>
 
                     <div className="text-yellow-400 mt-3">
                       # یا به روش سنتی:
                     </div>
-                    <div className="text-white">
-                      git checkout -b feature/user-authentication
+                    <div dir="ltr" className="text-white">
+                      git checkout -b {`${branchType}/${branchName}`}
                     </div>
 
                     <div className="text-yellow-400 mt-3">
                       # برای push اولیه:
                     </div>
-                    <div className="text-white">
-                      git push -u origin feature/user-authentication
+                    <div dir="ltr" className="text-white">
+                      git push -u origin {`${branchType}/${branchName}`}
                     </div>
                   </div>
 
@@ -942,7 +947,7 @@ const GitBranchChapter = () => {
                       نام نهایی:
                     </h5>
                     <code className="text-green-700 bg-green-100 px-2 py-1 rounded">
-                      feature/user-authentication
+                      {`${branchType}/${branchName}`}
                     </code>
                   </div>
                 </div>
@@ -963,9 +968,13 @@ const GitBranchChapter = () => {
                 </h4>
                 <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm mb-3">
                   <div className="text-yellow-400"># از main شروع کنید</div>
-                  <div className="text-white">git switch main</div>
-                  <div className="text-white">git pull origin main</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
+                  <div dir="ltr" className="text-white">
+                    git pull origin main
+                  </div>
+                  <div dir="ltr" className="text-white">
                     git switch -c feature/shopping-cart
                   </div>
                   <div className="text-gray-400 mt-2">
@@ -985,13 +994,17 @@ const GitBranchChapter = () => {
                 </h4>
                 <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm mb-3">
                   <div className="text-yellow-400"># از production branch</div>
-                  <div className="text-white">git switch main</div>
-                  <div className="text-white">git pull origin main</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
+                  <div dir="ltr" className="text-white">
+                    git pull origin main
+                  </div>
+                  <div dir="ltr" className="text-white">
                     git switch -c hotfix/critical-security-fix
                   </div>
                   <div className="text-gray-400 mt-2"># رفع باگ...</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git push -u origin hotfix/critical-security-fix
                   </div>
                 </div>
@@ -1010,20 +1023,20 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400">
                     # ایجاد branch اصلی ویژگی
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git switch -c feature/user-management
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git push -u origin feature/user-management
                   </div>
 
                   <div className="text-yellow-400 mt-2">
                     # هر عضو تیم sub-branch ایجاد می‌کند
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git switch -c feature/user-management-frontend
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git switch -c feature/user-management-backend
                   </div>
                 </div>
@@ -1081,7 +1094,7 @@ const GitBranchChapter = () => {
         <div className="space-y-6">
           {/* Header */}
           <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-xl border border-purple-200">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center">
               <ArrowRightLeft className="w-10 h-10 text-purple-600 ml-3" />
               <div>
                 <h2 className="text-3xl font-bold text-purple-800">
@@ -1099,32 +1112,40 @@ const GitBranchChapter = () => {
             <div className="bg-green-50 border border-green-200 rounded-xl p-6">
               <h3 className="text-xl font-bold text-green-800 mb-4 flex items-center">
                 <CheckCircle className="w-6 h-6 ml-2" />
-                روش مدرن (git switch)
+                روش جدید (git switch)
               </h3>
               <div className="space-y-4">
                 <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
                   <div className="text-yellow-400 mb-2">
                     # تغییر به branch موجود
                   </div>
-                  <div className="text-white">git switch main</div>
-                  <div className="text-green-400 mt-1">
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
+                  <div dir="ltr" className="text-green-400 mt-1">
                     Switched to branch 'main'
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # تغییر به branch remote
                   </div>
-                  <div className="text-white">git switch feature/login</div>
+                  <div dir="ltr" className="text-white">
+                    git switch feature/login
+                  </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # ایجاد و تغییر همزمان
                   </div>
-                  <div className="text-white">git switch -c feature/new</div>
+                  <div dir="ltr" className="text-white">
+                    git switch -c feature/new
+                  </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # برگشت به branch قبلی
                   </div>
-                  <div className="text-white">git switch -</div>
+                  <div dir="ltr" className="text-white">
+                    git switch -
+                  </div>
                 </div>
 
                 <div className="bg-green-100 p-3 rounded">
@@ -1142,32 +1163,40 @@ const GitBranchChapter = () => {
             <div className="bg-orange-50 border border-orange-200 rounded-xl p-6">
               <h3 className="text-xl font-bold text-orange-800 mb-4 flex items-center">
                 <Settings className="w-6 h-6 ml-2" />
-                روش سنتی (git checkout)
+                روش قدیمی (git checkout)
               </h3>
               <div className="space-y-4">
                 <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
                   <div className="text-yellow-400 mb-2">
                     # تغییر به branch موجود
                   </div>
-                  <div className="text-white">git checkout main</div>
-                  <div className="text-green-400 mt-1">
+                  <div dir="ltr" className="text-white">
+                    git checkout main
+                  </div>
+                  <div dir="ltr" className="text-green-400 mt-1">
                     Switched to branch 'main'
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # ایجاد و تغییر همزمان
                   </div>
-                  <div className="text-white">git checkout -b feature/new</div>
+                  <div dir="ltr" className="text-white">
+                    git checkout -b feature/new
+                  </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # تغییر به commit مشخص
                   </div>
-                  <div className="text-white">git checkout 1a2b3c4</div>
+                  <div dir="ltr" className="text-white">
+                    git checkout 1a2b3c4
+                  </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # برگشت به branch قبلی
                   </div>
-                  <div className="text-white">git checkout -</div>
+                  <div dir="ltr" className="text-white">
+                    git checkout -
+                  </div>
                 </div>
 
                 <div className="bg-orange-100 p-3 rounded">
@@ -1197,7 +1226,9 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400">
                     # تغییر اجباری (نادیده گیری تغییرات)
                   </div>
-                  <div className="text-white">git switch --force main</div>
+                  <div dir="ltr" className="text-white">
+                    git switch --force main
+                  </div>
                   <div className="text-red-400 mt-1">
                     ⚠️ تغییرات محلی از دست می‌روند!
                   </div>
@@ -1205,14 +1236,16 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400 mt-3">
                     # تغییر با ایجاد branch جدید از remote
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git switch -c local-branch origin/remote-branch
                   </div>
 
                   <div className="text-yellow-400 mt-3">
                     # تغییر به commit مشخص (detached HEAD)
                   </div>
-                  <div className="text-white">git switch --detach 1a2b3c4</div>
+                  <div dir="ltr" className="text-white">
+                    git switch --detach 1a2b3c4
+                  </div>
                 </div>
               </div>
 
@@ -1224,25 +1257,41 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400">
                     # اگر تغییرات uncommitted دارید
                   </div>
-                  <div className="text-white">git status</div>
-                  <div className="text-red-400 mt-1">modified: file.txt</div>
+                  <div dir="ltr" className="text-white">
+                    git status
+                  </div>
+                  <div dir="ltr" className="text-red-400 mt-1">
+                    modified: file.txt
+                  </div>
 
                   <div className="text-yellow-400 mt-2">
                     # گزینه 1: stash کردن
                   </div>
-                  <div className="text-white">git stash</div>
-                  <div className="text-white">git switch other-branch</div>
-                  <div className="text-white">git switch main</div>
-                  <div className="text-white">git stash pop</div>
+                  <div dir="ltr" className="text-white">
+                    git stash
+                  </div>
+                  <div dir="ltr" className="text-white">
+                    git switch other-branch
+                  </div>
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
+                  <div dir="ltr" className="text-white">
+                    git stash pop
+                  </div>
 
                   <div className="text-yellow-400 mt-2">
                     # گزینه 2: commit کردن
                   </div>
-                  <div className="text-white">git add .</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
+                    git add .
+                  </div>
+                  <div dir="ltr" className="text-white">
                     git commit -m "WIP: work in progress"
                   </div>
-                  <div className="text-white">git switch other-branch</div>
+                  <div dir="ltr" className="text-white">
+                    git switch other-branch
+                  </div>
                 </div>
               </div>
             </div>
@@ -1320,16 +1369,20 @@ const GitBranchChapter = () => {
                   </h4>
                   <div className="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm">
                     <div className="text-yellow-400">دستور مدرن:</div>
-                    <div className="text-white">git switch {activeBranch}</div>
+                    <div dir="ltr" className="text-white">
+                      git switch {activeBranch}
+                    </div>
 
                     <div className="text-yellow-400 mt-3">دستور سنتی:</div>
-                    <div className="text-white">
+                    <div dir="ltr" className="text-white">
                       git checkout {activeBranch}
                     </div>
 
                     <div className="text-yellow-400 mt-3">بررسی وضعیت:</div>
-                    <div className="text-white">git status</div>
-                    <div className="text-green-400 mt-1">
+                    <div dir="ltr" className="text-white">
+                      git status
+                    </div>
+                    <div dir="ltr" className="text-green-400 mt-1">
                       On branch {activeBranch}
                     </div>
 
@@ -1384,17 +1437,21 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400">
                     # مطمئن شوید روی main هستید
                   </div>
-                  <div className="text-white">git switch main</div>
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
 
                   <div className="text-yellow-400 mt-2">
                     # آخرین تغییرات را دریافت کنید
                   </div>
-                  <div className="text-white">git pull origin main</div>
+                  <div dir="ltr" className="text-white">
+                    git pull origin main
+                  </div>
 
                   <div className="text-yellow-400 mt-2">
                     # branch جدید ایجاد کنید
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git switch -c feature/new-feature
                   </div>
 
@@ -1414,21 +1471,29 @@ const GitBranchChapter = () => {
                 </h4>
                 <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm mb-3">
                   <div className="text-yellow-400"># ذخیره کار فعلی</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git stash push -m "work in progress"
                   </div>
 
                   <div className="text-yellow-400 mt-2">
                     # تغییر به branch دیگر
                   </div>
-                  <div className="text-white">git switch main</div>
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
 
                   <div className="text-yellow-400 mt-2"># بررسی کد...</div>
-                  <div className="text-gray-400">git log --oneline -5</div>
+                  <div dir="ltr" className="text-white">
+                    git log --oneline -5
+                  </div>
 
                   <div className="text-yellow-400 mt-2"># برگشت به کار</div>
-                  <div className="text-white">git switch feature/my-work</div>
-                  <div className="text-white">git stash pop</div>
+                  <div dir="ltr" className="text-white">
+                    git switch feature/my-work
+                  </div>
+                  <div dir="ltr" className="text-white">
+                    git stash pop
+                  </div>
                 </div>
                 <p className="text-gray-600 text-sm">
                   برای بررسی سریع کد بدون از دست دادن کار فعلی.
@@ -1444,28 +1509,40 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400">
                     # خطا هنگام تغییر branch
                   </div>
-                  <div className="text-white">git switch main</div>
-                  <div className="text-red-400 mt-1">
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
+                  <div dir="ltr" className="text-red-400 mt-1">
                     error: Your local changes would be overwritten
                   </div>
 
                   <div className="text-yellow-400 mt-2"># راه حل 1: stash</div>
-                  <div className="text-white">git stash</div>
-                  <div className="text-white">git switch main</div>
+                  <div dir="ltr" className="text-white">
+                    git stash
+                  </div>
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
 
                   <div className="text-yellow-400 mt-2">
                     # راه حل 2: commit موقت
                   </div>
-                  <div className="text-white">git add .</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
+                    git add .
+                  </div>
+                  <div dir="ltr" className="text-white">
                     git commit -m "WIP: temporary commit"
                   </div>
-                  <div className="text-white">git switch main</div>
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
 
                   <div className="text-yellow-400 mt-2">
                     # راه حل 3: تغییر اجباری (خطرناک!)
                   </div>
-                  <div className="text-white">git switch --force main</div>
+                  <div dir="ltr" className="text-white">
+                    git switch --force main
+                  </div>
                   <div className="text-red-400 mt-1">
                     ⚠️ تغییرات از دست می‌روند!
                   </div>
@@ -1487,7 +1564,9 @@ const GitBranchChapter = () => {
                 </h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-gray-900 text-green-400 p-2 rounded font-mono text-xs">
-                    <div className="text-white">git switch -</div>
+                    <div dir="ltr" className="text-white">
+                      git switch -
+                    </div>
                     <div className="text-gray-400"># برگشت به branch قبلی</div>
                   </div>
                   <p className="text-indigo-600">
@@ -1502,7 +1581,9 @@ const GitBranchChapter = () => {
                 </h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-gray-900 text-green-400 p-2 rounded font-mono text-xs">
-                    <div className="text-white">git reflog --oneline -10</div>
+                    <div dir="ltr" className="text-white">
+                      git reflog --oneline -10
+                    </div>
                     <div className="text-gray-400">
                       # تاریخچه تغییرات branch
                     </div>
@@ -1519,7 +1600,9 @@ const GitBranchChapter = () => {
                 </h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-gray-900 text-green-400 p-2 rounded font-mono text-xs">
-                    <div className="text-white">git switch fea&lt;TAB&gt;</div>
+                    <div dir="ltr" className="text-white">
+                      git switch fea&lt;TAB&gt;
+                    </div>
                     <div className="text-gray-400"># تکمیل نام branch</div>
                   </div>
                   <p className="text-indigo-600">
@@ -1532,10 +1615,12 @@ const GitBranchChapter = () => {
                 <h4 className="font-bold text-indigo-700 mb-3">⚡ Alias ها:</h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-gray-900 text-green-400 p-2 rounded font-mono text-xs">
-                    <div className="text-white">
+                    <div dir="ltr" className="text-white">
                       git config --global alias.sw switch
                     </div>
-                    <div className="text-white">git sw main</div>
+                    <div dir="ltr" className="text-white">
+                      git sw main
+                    </div>
                   </div>
                   <p className="text-indigo-600">
                     میانبرهای شخصی برای دستورات پرکاربرد تعریف کنید.
@@ -1557,15 +1642,19 @@ const GitBranchChapter = () => {
                   🚫 "Branch not found"
                 </h4>
                 <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm mb-2">
-                  <div className="text-red-400">
+                  <div dir="ltr" className="text-red-400">
                     error: pathspec 'feature/login' did not match any file(s)
                   </div>
                   <div className="text-yellow-400 mt-2">
                     # بررسی branch های موجود
                   </div>
-                  <div className="text-white">git branch -a</div>
+                  <div dir="ltr" className="text-white">
+                    git branch -a
+                  </div>
                   <div className="text-yellow-400 mt-1"># یا fetch کردن</div>
-                  <div className="text-white">git fetch origin</div>
+                  <div dir="ltr" className="text-white">
+                    git fetch origin
+                  </div>
                 </div>
                 <p className="text-red-600 text-sm">
                   Branch ممکن است محلی وجود نداشته باشد یا نیاز به fetch داشته
@@ -1578,15 +1667,17 @@ const GitBranchChapter = () => {
                   ⚠️ "Uncommitted changes"
                 </h4>
                 <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm mb-2">
-                  <div className="text-red-400">
+                  <div dir="ltr" className="text-red-400">
                     error: Your local changes would be overwritten by checkout
                   </div>
                   <div className="text-yellow-400 mt-2"># راه حل‌های ممکن:</div>
-                  <div className="text-white">git stash # ذخیره موقت</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
+                    git stash # ذخیره موقت
+                  </div>
+                  <div dir="ltr" className="text-white">
                     git add . && git commit -m "WIP" # commit موقت
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git switch --force main # اجباری (خطرناک)
                   </div>
                 </div>
@@ -1601,15 +1692,19 @@ const GitBranchChapter = () => {
                   🔄 "Detached HEAD"
                 </h4>
                 <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm mb-2">
-                  <div className="text-orange-400">
+                  <div dir="ltr" className="text-orange-400">
                     You are in 'detached HEAD' state
                   </div>
                   <div className="text-yellow-400 mt-2"># برگشت به branch</div>
-                  <div className="text-white">git switch main</div>
+                  <div dir="ltr" className="text-white">
+                    git switch main
+                  </div>
                   <div className="text-yellow-400 mt-1">
                     # یا ایجاد branch جدید
                   </div>
-                  <div className="text-white">git switch -c new-branch</div>
+                  <div dir="ltr" className="text-white">
+                    git switch -c new-branch
+                  </div>
                 </div>
                 <p className="text-red-600 text-sm">
                   وقتی روی commit مشخص هستید، نه روی branch. برای ادامه کار به
@@ -1638,10 +1733,8 @@ const GitBranchChapter = () => {
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-green-700 mb-3">
-                  ❌ اجتناب کنید:
-                </h4>
-                <ul className="space-y-2 text-green-600 text-sm">
+                <h4 className="font-bold text-red-600 mb-3">❌ اجتناب کنید:</h4>
+                <ul className="space-y-2 text-red-600 text-sm">
                   <li>• تغییر اجباری بدون فکر</li>
                   <li>• فراموش کردن تغییرات uncommitted</li>
                   <li>• کار در حالت detached HEAD</li>
@@ -1663,7 +1756,7 @@ const GitBranchChapter = () => {
         <div className="space-y-6">
           {/* Header */}
           <div className="bg-gradient-to-r from-red-50 to-pink-50 p-6 rounded-xl border border-red-200">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center">
               <Trash2 className="w-10 h-10 text-red-600 ml-3" />
               <div>
                 <h2 className="text-3xl font-bold text-red-800">
@@ -1688,23 +1781,23 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400 mb-2">
                     # حذف branch merge شده
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch -d feature/completed
                   </div>
-                  <div className="text-green-400 mt-1">
+                  <div dir="ltr" className="text-green-400 mt-1">
                     Deleted branch feature/completed (was 1a2b3c4).
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # اگر merge نشده باشد
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch -d feature/unmerged
                   </div>
-                  <div className="text-red-400 mt-1">
+                  <div dir="ltr" className="text-red-400 mt-1">
                     error: The branch 'feature/unmerged' is not fully merged.
                   </div>
-                  <div className="text-red-400">
+                  <div dir="ltr" className="text-red-400">
                     If you are sure you want to delete it, run 'git branch -D
                     feature/unmerged'.
                   </div>
@@ -1730,22 +1823,22 @@ const GitBranchChapter = () => {
               <div className="space-y-4">
                 <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
                   <div className="text-yellow-400 mb-2"># حذف اجباری</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch -D feature/experimental
                   </div>
-                  <div className="text-red-400 mt-1">
+                  <div dir="ltr" className="text-red-400 mt-1">
                     Deleted branch feature/experimental (was 5f6g7h8).
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2"># فرم کامل</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch --delete --force feature/test
                   </div>
 
                   <div className="text-yellow-400 mt-3 mb-2">
                     # حذف چندین branch
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch -D branch1 branch2 branch3
                   </div>
                 </div>
@@ -1772,29 +1865,29 @@ const GitBranchChapter = () => {
             <div className="space-y-4">
               <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm">
                 <div className="text-yellow-400 mb-2"># حذف از server</div>
-                <div className="text-white">
+                <div dir="ltr" className="text-white">
                   git push origin --delete feature/old-feature
                 </div>
-                <div className="text-green-400 mt-1">
+                <div dir="ltr" className="text-green-400 mt-1">
                   To https://github.com/user/repo.git
                 </div>
-                <div className="text-green-400">
+                <div dir="ltr" className="text-green-400">
                   {" "}
                   - [deleted] feature/old-feature
                 </div>
 
                 <div className="text-yellow-400 mt-3 mb-2"># سینتکس کوتاه</div>
-                <div className="text-white">
+                <div dir="ltr" className="text-white">
                   git push origin :feature/old-feature
                 </div>
 
                 <div className="text-yellow-400 mt-3 mb-2">
                   # حذف همزمان محلی و remote
                 </div>
-                <div className="text-white">
+                <div dir="ltr" className="text-white">
                   git branch -d feature/old-feature
                 </div>
-                <div className="text-white">
+                <div dir="ltr" className="text-white">
                   git push origin --delete feature/old-feature
                 </div>
               </div>
@@ -1826,21 +1919,31 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400">
                     # لیست branch های merge شده
                   </div>
-                  <div className="text-white">git branch --merged main</div>
-                  <div className="text-green-400 mt-1"> feature/login</div>
-                  <div className="text-green-400"> feature/signup</div>
-                  <div className="text-green-400">* main</div>
+                  <div dir="ltr" className="text-white">
+                    git branch --merged main
+                  </div>
+                  <div dir="ltr" className="text-green-400 mt-1">
+                    {" "}
+                    feature/login
+                  </div>
+                  <div dir="ltr" className="text-green-400">
+                    {" "}
+                    feature/signup
+                  </div>
+                  <div dir="ltr" className="text-green-400">
+                    * main
+                  </div>
 
                   <div className="text-yellow-400 mt-2">
                     # حذف همه (به جز main)
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch --merged main | grep -v main | xargs git branch
                     -d
                   </div>
 
                   <div className="text-yellow-400 mt-2"># نسخه امن‌تر</div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch --merged main | grep -v -E
                     "(main|master|develop)" | xargs -n 1 git branch -d
                   </div>
@@ -1860,19 +1963,22 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400">
                     # حذف تمام branch های با prefix مشخص
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch | grep "feature/" | xargs git branch -d
                   </div>
 
                   <div className="text-yellow-400 mt-2">
                     # حذف branch های قدیمی‌تر از 30 روز
                   </div>
-                  <div className="text-white">{`git for-each-ref --format="%(refname:short) %(committerdate)" refs/heads | awk '$2 < "'$(date -d '30 days ago' '+%Y-%m-%d')'"' | cut -d' ' -f1 | xargs git branch -D`}</div>
+                  <div
+                    dir="ltr"
+                    className="text-white"
+                  >{`git for-each-ref --format="%(refname:short) %(committerdate)" refs/heads | awk '$2 < "'$(date -d '30 days ago' '+%Y-%m-%d')'"' | cut -d' ' -f1 | xargs git branch -D`}</div>
 
                   <div className="text-yellow-400 mt-2">
                     # حذف branch های شخصی
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git branch | grep "username/" | xargs git branch -d
                   </div>
                 </div>
@@ -1891,12 +1997,16 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400">
                     # حذف reference های remote که دیگر وجود ندارند
                   </div>
-                  <div className="text-white">git remote prune origin</div>
-                  <div className="text-green-400 mt-1">Pruning origin</div>
-                  <div className="text-green-400">
+                  <div dir="ltr" className="text-white">
+                    git remote prune origin
+                  </div>
+                  <div dir="ltr" className="text-green-400 mt-1">
+                    Pruning origin
+                  </div>
+                  <div dir="ltr" className="text-green-400">
                     URL: https://github.com/user/repo.git
                   </div>
-                  <div className="text-green-400">
+                  <div dir="ltr" className="text-green-400">
                     {" "}
                     * [pruned] origin/feature/deleted
                   </div>
@@ -1904,12 +2014,14 @@ const GitBranchChapter = () => {
                   <div className="text-yellow-400 mt-2">
                     # یا همزمان با fetch
                   </div>
-                  <div className="text-white">git fetch --prune</div>
+                  <div dir="ltr" className="text-white">
+                    git fetch --prune
+                  </div>
 
                   <div className="text-yellow-400 mt-2">
                     # تنظیم خودکار prune
                   </div>
-                  <div className="text-white">
+                  <div dir="ltr" className="text-white">
                     git config --global fetch.prune true
                   </div>
                 </div>
@@ -1960,14 +2072,6 @@ const GitBranchChapter = () => {
                                 {info.status}
                               </span>
                             </div>
-                            <div className="flex space-x-2">
-                              <button className="text-xs bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition-colors">
-                                حذف امن
-                              </button>
-                              <button className="text-xs bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition-colors">
-                                حذف اجباری
-                              </button>
-                            </div>
                           </div>
                           <div className="mt-1 text-xs text-gray-600">
                             {info.commits} commits • آخرین فعالیت: 2 روز پیش
@@ -1975,37 +2079,28 @@ const GitBranchChapter = () => {
                         </div>
                       ))}
                   </div>
-
-                  <div className="mt-4 flex space-x-2">
-                    <button className="bg-orange-500 text-white px-4 py-2 rounded text-sm hover:bg-orange-600 transition-colors">
-                      حذف Merge شده‌ها
-                    </button>
-                    <button className="bg-red-500 text-white px-4 py-2 rounded text-sm hover:bg-red-600 transition-colors">
-                      حذف همه
-                    </button>
-                  </div>
                 </div>
 
                 <div>
                   <h4 className="font-bold text-gray-800 mb-3">دستورات حذف:</h4>
                   <div className="bg-gray-900 text-green-400 p-4 rounded font-mono text-sm">
                     <div className="text-yellow-400">حذف امن:</div>
-                    <div className="text-white">
+                    <div dir="ltr" className="text-white">
                       git branch -d feature/login
                     </div>
 
                     <div className="text-yellow-400 mt-3">حذف اجباری:</div>
-                    <div className="text-white">
+                    <div dir="ltr" className="text-white">
                       git branch -D feature/experimental
                     </div>
 
                     <div className="text-yellow-400 mt-3">حذف remote:</div>
-                    <div className="text-white">
+                    <div dir="ltr" className="text-white">
                       git push origin --delete feature/old
                     </div>
 
                     <div className="text-yellow-400 mt-3">حذف گروهی:</div>
-                    <div className="text-white">
+                    <div dir="ltr" className="text-white">
                       git branch --merged | grep -v main | xargs git branch -d
                     </div>
                   </div>
@@ -2045,30 +2140,36 @@ const GitBranchChapter = () => {
                 <div className="text-yellow-400 mb-2">
                   # پیدا کردن commit آخرین branch حذف شده
                 </div>
-                <div className="text-white">git reflog</div>
-                <div className="text-green-400 mt-1">
+                <div dir="ltr" className="text-white">
+                  git reflog
+                </div>
+                <div dir="ltr" className="text-green-400 mt-1">
                   1a2b3c4 HEAD@{0}: checkout: moving from feature/deleted to
                   main
                 </div>
-                <div className="text-green-400">
+                <div dir="ltr" className="text-green-400">
                   5d6e7f8 HEAD@{1}: commit: Last commit on deleted branch
                 </div>
 
                 <div className="text-yellow-400 mt-3 mb-2">
                   # بازیابی branch
                 </div>
-                <div className="text-white">
+                <div dir="ltr" className="text-white">
                   git branch feature/recovered 5d6e7f8
                 </div>
-                <div className="text-green-400 mt-1">
+                <div dir="ltr" className="text-green-400 mt-1">
                   Branch 'feature/recovered' created
                 </div>
 
                 <div className="text-yellow-400 mt-3 mb-2">
                   # یا استفاده از git fsck
                 </div>
-                <div className="text-white">git fsck --lost-found</div>
-                <div className="text-white">git show &lt;commit-hash&gt;</div>
+                <div dir="ltr" className="text-white">
+                  git fsck --lost-found
+                </div>
+                <div dir="ltr" className="text-white">
+                  git show &lt;commit-hash&gt;
+                </div>
               </div>
 
               <div className="bg-yellow-100 p-4 rounded">
@@ -2096,7 +2197,10 @@ const GitBranchChapter = () => {
                 <h4 className="font-bold text-indigo-700 mb-3">
                   🧹 اسکریپت تمیزکاری هفتگی
                 </h4>
-                <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm">
+                <div
+                  dir="ltr"
+                  className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm"
+                >
                   <div className="text-yellow-400">#!/bin/bash</div>
                   <div className="text-gray-400"># weekly-cleanup.sh</div>
                   <div className="text-white">echo "شروع تمیزکاری Git..."</div>
@@ -2112,11 +2216,17 @@ const GitBranchChapter = () => {
                   <div className="text-gray-400">
                     # تمیزکاری remote references
                   </div>
-                  <div className="text-white">git remote prune origin</div>
+                  <div dir="ltr" className="text-white">
+                    git remote prune origin
+                  </div>
                   <div className="text-white"></div>
                   <div className="text-gray-400"># بهینه‌سازی repository</div>
-                  <div className="text-white">git gc --aggressive</div>
-                  <div className="text-white">echo "تمیزکاری کامل شد!"</div>
+                  <div dir="ltr" className="text-white">
+                    git gc --aggressive
+                  </div>
+                  <div dir="ltr" className="text-white">
+                    echo "تمیزکاری کامل شد!"
+                  </div>
                 </div>
               </div>
 
@@ -2124,7 +2234,10 @@ const GitBranchChapter = () => {
                 <h4 className="font-bold text-indigo-700 mb-3">
                   🔍 اسکریپت تحلیل Branch
                 </h4>
-                <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm">
+                <div
+                  dir="ltr"
+                  className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm"
+                >
                   <div className="text-yellow-400">#!/bin/bash</div>
                   <div className="text-gray-400"># analyze-branches.sh</div>
                   <div className="text-white">echo "تحلیل Branch ها:"</div>
@@ -2155,7 +2268,10 @@ const GitBranchChapter = () => {
                 <h4 className="font-bold text-indigo-700 mb-3">
                   ⚡ Git Alias ها
                 </h4>
-                <div className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm">
+                <div
+                  dir="ltr"
+                  className="bg-gray-900 text-green-400 p-3 rounded font-mono text-sm"
+                >
                   <div className="text-yellow-400">
                     # اضافه کردن alias های مفید
                   </div>
@@ -2284,9 +2400,9 @@ const GitBranchChapter = () => {
       {/* Navigation */}
       <div
         style={{
-          top: `${navbarHeight + 100}px`,
+          top: `${navbarHeight + 32}px`,
         }}
-        className="main-navbar col-span-12 lg:col-span-2 rounded-lg h-fit flex flex-col bg-white lg:!sticky top-0 z-10"
+        className="col-span-12 lg:col-span-2 rounded-lg h-fit flex flex-col bg-white lg:!sticky top-0 z-10"
       >
         <div className="flex flex-col items-start justify-start p-4">
           <nav className="flex flex-col space-y-4">
