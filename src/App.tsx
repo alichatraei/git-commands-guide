@@ -6,6 +6,7 @@ import Chapter2 from "./pages/Chapter2";
 import Chapter3 from "./pages/Chapter3";
 import Footer from "./components/Footer";
 import GitBranchChapter from "./pages/Chapter4";
+import GitMergeConflictsPage from "./pages/Chapter5";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/chapter2" element={<Chapter2 />} />
             <Route path="/chapter3" element={<Chapter3 />} />
             <Route path="/chapter4" element={<GitBranchChapter />} />
+            <Route path="/chapter5" element={<GitMergeConflictsPage />} />
           </Routes>
         </main>
         <Footer />

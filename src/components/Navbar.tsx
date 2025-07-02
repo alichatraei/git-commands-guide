@@ -12,6 +12,7 @@ const Navbar: React.FC = () => {
     { path: "/chapter2", label: "فصل دوم: نصب و ترمینال" },
     { path: "/chapter3", label: "فصل سوم: Repository و Commands" },
     { path: "/chapter4", label: "فصل چهارم: Branches" },
+    { path: "/chapter5", label: "فصل پنجم: Conflict Merge" },
   ];
 
   return (
